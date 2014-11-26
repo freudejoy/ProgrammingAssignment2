@@ -39,7 +39,7 @@ cacheSolve <- function(x, ...) {
     return(s)
   }
   data <- x$get()  ## we reach this code only if x$getsolve() returned NULL
-  s <- solve(data, ...)  ## if m was NULL then we have to calculate thr inverted matrix
+  s <- solve(data, ...)  ## if s was NULL then we have to calculate thr inverted matrix
   x$setsolve(s)  # store the calculated inverted matrix in x 
   s   # return the inverted matrix to the caller
 }
